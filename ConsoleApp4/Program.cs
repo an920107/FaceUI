@@ -13,7 +13,7 @@ namespace CSHttpClientSample
     {
         static string apikey = "9afa2810150f48d999afac58761d4773";
         static string LargeGroupId = "111_ncu_iot_test1";
-        static bool debug = false;
+        static bool debug = true;
         static void Main()
         {
             Process();
@@ -39,13 +39,31 @@ namespace CSHttpClientSample
             Console.WriteLine("Train success\n");
 
             img = "https://i.pinimg.com/originals/8c/72/c8/8c72c89deb03d0caa88c9a1e0a27bc63.jpg";
-            string inputfaceid = await GetInputFaceId(img);
+            string inputresult = await GetInputFaceId(img);
+
+            JObject resultjson = JObject.Parse(inputresult.Substring(1, inputresult.Length-2));
+
+            string gender = resultjson["faceAttributes"]["gender"].ToString();
+            string age = resultjson["faceAttributes"]["age"].ToString();
+            string glasses = resultjson["faceAttributes"]["glasses"].ToString();
+            string[] Attributes = { gender, age, glasses };
+            
+
+
+            string inputfaceid = resultjson["faceId"].ToString();
             Console.WriteLine("get input face success\n");
 
-            string outputpersonid = await FindInLibrary(inputfaceid);
+            string outputpersonjson = await FindInLibrary(inputfaceid);
+            JObject parsedoutput = JObject.Parse(outputpersonjson);
+
+            string outputpersonid = parsedoutput["personId"].ToString();
+            string confidence = parsedoutput["confidence"].ToString();
+            
             Console.WriteLine("Get Match Person success\n");
 
+
             string result = await GetMatchPersonInfo(outputpersonid);
+            Console.WriteLine(result);
             Console.WriteLine("Get Match Person Info success\n");
         }
 
@@ -144,8 +162,11 @@ namespace CSHttpClientSample
             client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", apikey);
             var queryString = HttpUtility.ParseQueryString(string.Empty);
 
+            queryString["returnFaceId"] = "true";
+            queryString["returnFaceLandmarks"] = "false";
+            queryString["returnFaceAttributes"] = "age, gender, glasses";
+         
             var uri = "https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect?" + queryString;
-            queryString["returnFaceId"] = "True";
 
             byte[] byteData = Encoding.UTF8.GetBytes("{'url': '" + img_url + "'}");
 
@@ -160,7 +181,7 @@ namespace CSHttpClientSample
             if (debug)
                 Console.WriteLine(result);
 
-            return result.Substring(12, 36);
+            return result;
         }
 
         static async Task<string> FindInLibrary(string inputid)
@@ -186,7 +207,7 @@ namespace CSHttpClientSample
             JObject parseresult = JObject.Parse(result.Substring(1, result.Length-2));
  
 
-            return parseresult["candidates"][0]["personId"].ToString();
+            return parseresult["candidates"][0].ToString();
         }
 
         static async Task<string> GetMatchPersonInfo(string personid)
@@ -199,9 +220,8 @@ namespace CSHttpClientSample
             string result = await response.Content.ReadAsStringAsync();
 
             JObject parseresult = JObject.Parse(result);
-            if (debug)
-                Console.WriteLine(parseresult["userData"]);
-            return parseresult["userData"].ToString();
+            Console.WriteLine(parseresult);
+            return parseresult["name"].ToString();
         }
     }
 }
