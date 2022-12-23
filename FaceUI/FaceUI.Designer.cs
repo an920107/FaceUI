@@ -46,6 +46,7 @@ namespace FaceUI
             this.label7 = new System.Windows.Forms.Label();
             this.confidenceLabel = new System.Windows.Forms.Label();
             this.picturesListBox = new System.Windows.Forms.ListBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,7 +114,7 @@ namespace FaceUI
             this.pictureBox.Location = new System.Drawing.Point(424, 56);
             this.pictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(374, 330);
+            this.pictureBox.Size = new System.Drawing.Size(374, 378);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox.TabIndex = 4;
             this.pictureBox.TabStop = false;
@@ -150,7 +151,7 @@ namespace FaceUI
             // 
             // findButton
             // 
-            this.findButton.Location = new System.Drawing.Point(33, 364);
+            this.findButton.Location = new System.Drawing.Point(33, 411);
             this.findButton.Name = "findButton";
             this.findButton.Size = new System.Drawing.Size(75, 23);
             this.findButton.TabIndex = 6;
@@ -160,7 +161,7 @@ namespace FaceUI
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(123, 364);
+            this.addButton.Location = new System.Drawing.Point(123, 411);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(75, 23);
             this.addButton.TabIndex = 6;
@@ -210,15 +211,23 @@ namespace FaceUI
             this.picturesListBox.ItemHeight = 12;
             this.picturesListBox.Location = new System.Drawing.Point(219, 106);
             this.picturesListBox.Name = "picturesListBox";
-            this.picturesListBox.Size = new System.Drawing.Size(165, 280);
+            this.picturesListBox.Size = new System.Drawing.Size(165, 328);
             this.picturesListBox.TabIndex = 8;
             this.picturesListBox.SelectedIndexChanged += new System.EventHandler(this.PicturesListBox_SelectedIndexChanged);
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.Location = new System.Drawing.Point(33, 368);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(165, 22);
+            this.nameTextBox.TabIndex = 9;
             // 
             // FaceUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(845, 446);
+            this.ClientSize = new System.Drawing.Size(845, 482);
+            this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.picturesListBox);
             this.Controls.Add(this.confidenceLabel);
             this.Controls.Add(this.label7);
@@ -264,6 +273,7 @@ namespace FaceUI
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label confidenceLabel;
         private System.Windows.Forms.ListBox picturesListBox;
+        private System.Windows.Forms.TextBox nameTextBox;
     }
 }
 
