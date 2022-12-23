@@ -20,10 +20,16 @@ namespace FaceUI {
 
         private void ImageButton_Click(object sender, EventArgs e) {
             string imgUrl = this.imageUrlTextBox.Text;
+            string[] attr = new string[0];
+            if (imgUrl.Equals(""))
+                return;
             this.pictureBox.Load(imgUrl);
-            string age = "";
-            string gender = "";
-            string glasses = "";
+            Program.GetInputAttr(imgUrl).Wait();
+            attr = Program.GetInputAttr(imgUrl).Result;
+            Console.WriteLine(attr[0]);
+            string age = attr[0];
+            string gender = attr[1];
+            string glasses = attr[2];
             this.ageLabel.Text = age;
             this.genderLabel.Text = gender;
             this.glassesLabel.Text = glasses;

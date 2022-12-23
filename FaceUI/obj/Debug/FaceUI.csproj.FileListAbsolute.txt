@@ -24,4 +24,4 @@ D:\Users\游宗穎\Downloads\ConsoleApp4\FaceUI\obj\Debug\FaceUI.csproj.CoreComp
 D:\Users\游宗穎\Downloads\ConsoleApp4\FaceUI\obj\Debug\FaceUI.csproj.CopyComplete
 D:\Users\游宗穎\Downloads\ConsoleApp4\FaceUI\obj\Debug\FaceUI.exe
 D:\Users\游宗穎\Downloads\ConsoleApp4\FaceUI\obj\Debug\FaceUI.pdb
->>>>>>> 75e983dbcb3884188990eb25f4b071f5c9c3fdec
+
