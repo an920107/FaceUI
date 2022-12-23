@@ -11,6 +11,7 @@ C:\Users\jenny\source\repos\ConsoleApp4\FaceUI\obj\Debug\FaceUI.csproj.CoreCompi
 C:\Users\jenny\source\repos\ConsoleApp4\FaceUI\obj\Debug\FaceUI.csproj.CopyComplete
 C:\Users\jenny\source\repos\ConsoleApp4\FaceUI\obj\Debug\FaceUI.exe
 C:\Users\jenny\source\repos\ConsoleApp4\FaceUI\obj\Debug\FaceUI.pdb
+<<<<<<< HEAD
 C:\Users\Jason\source\repos\FaceUI\FaceUI\bin\Debug\FaceUI.exe.config
 C:\Users\Jason\source\repos\FaceUI\FaceUI\bin\Debug\FaceUI.exe
 C:\Users\Jason\source\repos\FaceUI\FaceUI\bin\Debug\FaceUI.pdb
@@ -25,3 +26,18 @@ C:\Users\Jason\source\repos\FaceUI\FaceUI\obj\Debug\FaceUI.csproj.CoreCompileInp
 C:\Users\Jason\source\repos\FaceUI\FaceUI\obj\Debug\FaceUI.csproj.CopyComplete
 C:\Users\Jason\source\repos\FaceUI\FaceUI\obj\Debug\FaceUI.exe
 C:\Users\Jason\source\repos\FaceUI\FaceUI\obj\Debug\FaceUI.pdb
+=======
+D:\Users\游宗穎\Downloads\ConsoleApp4\FaceUI\bin\Debug\FaceUI.exe.config
+D:\Users\游宗穎\Downloads\ConsoleApp4\FaceUI\bin\Debug\FaceUI.exe
+D:\Users\游宗穎\Downloads\ConsoleApp4\FaceUI\bin\Debug\FaceUI.pdb
+D:\Users\游宗穎\Downloads\ConsoleApp4\FaceUI\bin\Debug\Newtonsoft.Json.dll
+D:\Users\游宗穎\Downloads\ConsoleApp4\FaceUI\bin\Debug\Newtonsoft.Json.xml
+D:\Users\游宗穎\Downloads\ConsoleApp4\FaceUI\obj\Debug\FaceUI.csproj.AssemblyReference.cache
+D:\Users\游宗穎\Downloads\ConsoleApp4\FaceUI\obj\Debug\FaceUI.FaceUI.resources
+D:\Users\游宗穎\Downloads\ConsoleApp4\FaceUI\obj\Debug\FaceUI.Properties.Resources.resources
+D:\Users\游宗穎\Downloads\ConsoleApp4\FaceUI\obj\Debug\FaceUI.csproj.GenerateResource.cache
+D:\Users\游宗穎\Downloads\ConsoleApp4\FaceUI\obj\Debug\FaceUI.csproj.CoreCompileInputs.cache
+D:\Users\游宗穎\Downloads\ConsoleApp4\FaceUI\obj\Debug\FaceUI.csproj.CopyComplete
+D:\Users\游宗穎\Downloads\ConsoleApp4\FaceUI\obj\Debug\FaceUI.exe
+D:\Users\游宗穎\Downloads\ConsoleApp4\FaceUI\obj\Debug\FaceUI.pdb
+>>>>>>> 75e983dbcb3884188990eb25f4b071f5c9c3fdec
