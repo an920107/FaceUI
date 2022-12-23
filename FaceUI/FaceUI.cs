@@ -33,11 +33,9 @@ namespace FaceUI {
             bool isFaceIdExist = false;
             if (isFaceIdExist) {
                 string name = "";
-                string faceId = "";
                 string confidence = "";
                 string imgUrl = "";
                 this.nameLabel.Text = name;
-                this.faceIdLabel.Text = faceId;
                 this.confidenceLabel.Text = confidence;
                 this.pictureBox.Load(imgUrl);
             }

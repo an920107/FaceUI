@@ -42,9 +42,7 @@ namespace FaceUI
             this.findButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
-            this.faceIdLabel = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.confidenceLabel = new System.Windows.Forms.Label();
             this.picturesListBox = new System.Windows.Forms.ListBox();
@@ -115,7 +113,7 @@ namespace FaceUI
             this.pictureBox.Location = new System.Drawing.Point(424, 56);
             this.pictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(374, 331);
+            this.pictureBox.Size = new System.Drawing.Size(374, 330);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox.TabIndex = 4;
             this.pictureBox.TabStop = false;
@@ -152,7 +150,7 @@ namespace FaceUI
             // 
             // findButton
             // 
-            this.findButton.Location = new System.Drawing.Point(219, 364);
+            this.findButton.Location = new System.Drawing.Point(33, 364);
             this.findButton.Name = "findButton";
             this.findButton.Size = new System.Drawing.Size(75, 23);
             this.findButton.TabIndex = 6;
@@ -162,7 +160,7 @@ namespace FaceUI
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(309, 364);
+            this.addButton.Location = new System.Drawing.Point(123, 364);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(75, 23);
             this.addButton.TabIndex = 6;
@@ -179,15 +177,6 @@ namespace FaceUI
             this.label5.TabIndex = 7;
             this.label5.Text = "姓名";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(31, 296);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 12);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "FaceID";
-            // 
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
@@ -197,19 +186,10 @@ namespace FaceUI
             this.nameLabel.TabIndex = 7;
             this.nameLabel.Text = "Name";
             // 
-            // faceIdLabel
-            // 
-            this.faceIdLabel.AutoSize = true;
-            this.faceIdLabel.Location = new System.Drawing.Point(104, 296);
-            this.faceIdLabel.Name = "faceIdLabel";
-            this.faceIdLabel.Size = new System.Drawing.Size(17, 12);
-            this.faceIdLabel.TabIndex = 7;
-            this.faceIdLabel.Text = "ID";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(31, 338);
+            this.label7.Location = new System.Drawing.Point(31, 297);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(41, 12);
             this.label7.TabIndex = 7;
@@ -218,7 +198,7 @@ namespace FaceUI
             // confidenceLabel
             // 
             this.confidenceLabel.AutoSize = true;
-            this.confidenceLabel.Location = new System.Drawing.Point(102, 338);
+            this.confidenceLabel.Location = new System.Drawing.Point(102, 297);
             this.confidenceLabel.Name = "confidenceLabel";
             this.confidenceLabel.Size = new System.Drawing.Size(59, 12);
             this.confidenceLabel.TabIndex = 7;
@@ -230,7 +210,7 @@ namespace FaceUI
             this.picturesListBox.ItemHeight = 12;
             this.picturesListBox.Location = new System.Drawing.Point(219, 106);
             this.picturesListBox.Name = "picturesListBox";
-            this.picturesListBox.Size = new System.Drawing.Size(165, 244);
+            this.picturesListBox.Size = new System.Drawing.Size(165, 280);
             this.picturesListBox.TabIndex = 8;
             this.picturesListBox.SelectedIndexChanged += new System.EventHandler(this.PicturesListBox_SelectedIndexChanged);
             // 
@@ -242,8 +222,6 @@ namespace FaceUI
             this.Controls.Add(this.picturesListBox);
             this.Controls.Add(this.confidenceLabel);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.faceIdLabel);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.addButton);
@@ -282,9 +260,7 @@ namespace FaceUI
         private System.Windows.Forms.Button findButton;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label nameLabel;
-        private System.Windows.Forms.Label faceIdLabel;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label confidenceLabel;
         private System.Windows.Forms.ListBox picturesListBox;
