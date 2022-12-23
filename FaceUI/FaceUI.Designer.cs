@@ -38,7 +38,7 @@ namespace FaceUI
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.ageLabel = new System.Windows.Forms.Label();
             this.genderLabel = new System.Windows.Forms.Label();
-            this.emotionLabel = new System.Windows.Forms.Label();
+            this.glassesLabel = new System.Windows.Forms.Label();
             this.findButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -69,7 +69,7 @@ namespace FaceUI
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 12);
             this.label2.TabIndex = 1;
-            this.label2.Text = "表情";
+            this.label2.Text = "眼鏡";
             // 
             // label3
             // 
@@ -140,15 +140,15 @@ namespace FaceUI
             this.genderLabel.TabIndex = 5;
             this.genderLabel.Text = "Gender";
             // 
-            // emotionLabel
+            // glassesLabel
             // 
-            this.emotionLabel.AutoSize = true;
-            this.emotionLabel.Location = new System.Drawing.Point(104, 201);
-            this.emotionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.emotionLabel.Name = "emotionLabel";
-            this.emotionLabel.Size = new System.Drawing.Size(45, 12);
-            this.emotionLabel.TabIndex = 5;
-            this.emotionLabel.Text = "Emotion";
+            this.glassesLabel.AutoSize = true;
+            this.glassesLabel.Location = new System.Drawing.Point(104, 201);
+            this.glassesLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.glassesLabel.Name = "glassesLabel";
+            this.glassesLabel.Size = new System.Drawing.Size(38, 12);
+            this.glassesLabel.TabIndex = 5;
+            this.glassesLabel.Text = "Glasses";
             // 
             // findButton
             // 
@@ -248,7 +248,7 @@ namespace FaceUI
             this.Controls.Add(this.label5);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.findButton);
-            this.Controls.Add(this.emotionLabel);
+            this.Controls.Add(this.glassesLabel);
             this.Controls.Add(this.genderLabel);
             this.Controls.Add(this.ageLabel);
             this.Controls.Add(this.pictureBox);
@@ -278,7 +278,7 @@ namespace FaceUI
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Label ageLabel;
         private System.Windows.Forms.Label genderLabel;
-        private System.Windows.Forms.Label emotionLabel;
+        private System.Windows.Forms.Label glassesLabel;
         private System.Windows.Forms.Button findButton;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Label label5;

@@ -23,10 +23,10 @@ namespace FaceUI {
             this.pictureBox.Load(imgUrl);
             string age = "";
             string gender = "";
-            string emotion = "";
+            string glasses = "";
             this.ageLabel.Text = age;
             this.genderLabel.Text = gender;
-            this.emotionLabel.Text = emotion;
+            this.glassesLabel.Text = glasses;
         }
 
         private void FindButton_Click(object sender, EventArgs e) {
