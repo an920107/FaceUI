@@ -4,7 +4,6 @@ using System.Text;
 using System.Net.Http;
 using System.Web;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace CSHttpClientSample
@@ -16,8 +15,42 @@ namespace CSHttpClientSample
         static bool debug = true;
         static void Main()
         {
-            Process();
+            Console.WriteLine(GetInputAttr("https://i.pinimg.com/originals/2d/82/c4/2d82c4f2a1adc4f861520d1fe25e0f4e.jpg").Result);
             Console.ReadLine();
+        }
+
+        public static async Task<string[]> GetInputAttr(string img_url) {
+            var client = new HttpClient();
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", apikey);
+            var queryString = HttpUtility.ParseQueryString(string.Empty);
+
+            queryString["returnFaceId"] = "true";
+            queryString["returnFaceLandmarks"] = "false";
+            queryString["returnFaceAttributes"] = "age, gender, glasses";
+
+            var uri = "https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect?" + queryString;
+
+            byte[] byteData = Encoding.UTF8.GetBytes("{'url': '" + img_url + "'}");
+
+            HttpResponseMessage response;
+            string result;
+            using (var content = new ByteArrayContent(byteData)) {
+                content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+                response = Task.Run(() => client.PostAsync(uri, content)).Result;
+                //response = await client.PostAsync(uri, content);
+                result = await response.Content.ReadAsStringAsync();
+            }
+            if (debug)
+                Console.WriteLine(result);
+
+            JObject resultjson = JObject.Parse(result.Substring(1, result.Length - 2));
+
+            string gender = resultjson["faceAttributes"]["gender"].ToString();
+            string age = resultjson["faceAttributes"]["age"].ToString();
+            string glasses = resultjson["faceAttributes"]["glasses"].ToString();
+            string[] Attributes = { gender, age, glasses };
+
+            return Attributes;
         }
 
         static async void Process()

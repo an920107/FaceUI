@@ -1,10 +1,7 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
@@ -28,6 +25,8 @@ namespace FaceUI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FaceUI());
+
+            Console.ReadLine();
         }
 
         public static async Task<string[]> GetInputAttr(string img_url)
@@ -49,7 +48,8 @@ namespace FaceUI
             using (var content = new ByteArrayContent(byteData))
             {
                 content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-                response = await client.PostAsync(uri, content);
+                response = Task.Run(() => client.PostAsync(uri, content)).Result;
+                //response = await client.PostAsync(uri, content);
                 result = await response.Content.ReadAsStringAsync();
             }
             if (debug)
@@ -60,7 +60,7 @@ namespace FaceUI
             string gender = resultjson["faceAttributes"]["gender"].ToString();
             string age = resultjson["faceAttributes"]["age"].ToString();
             string glasses = resultjson["faceAttributes"]["glasses"].ToString();
-            string[] Attributes = { gender, age, glasses };
+            string[] Attributes = { gender, age, (!glasses.StartsWith("No")).ToString().ToLower() };
 
             return Attributes;
         }

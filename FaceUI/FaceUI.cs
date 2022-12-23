@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -24,7 +25,6 @@ namespace FaceUI {
             if (imgUrl.Equals(""))
                 return;
             this.pictureBox.Load(imgUrl);
-            Program.GetInputAttr(imgUrl).Wait();
             attr = Program.GetInputAttr(imgUrl).Result;
             Console.WriteLine(attr[0]);
             string age = attr[0];
