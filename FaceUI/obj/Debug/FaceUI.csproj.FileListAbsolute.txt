@@ -1,0 +1,13 @@
+C:\Users\jenny\source\repos\ConsoleApp4\FaceUI\bin\Debug\FaceUI.exe.config
+C:\Users\jenny\source\repos\ConsoleApp4\FaceUI\bin\Debug\FaceUI.exe
+C:\Users\jenny\source\repos\ConsoleApp4\FaceUI\bin\Debug\FaceUI.pdb
+C:\Users\jenny\source\repos\ConsoleApp4\FaceUI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jenny\source\repos\ConsoleApp4\FaceUI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jenny\source\repos\ConsoleApp4\FaceUI\obj\Debug\FaceUI.csproj.AssemblyReference.cache
+C:\Users\jenny\source\repos\ConsoleApp4\FaceUI\obj\Debug\FaceUI.FaceUI.resources
+C:\Users\jenny\source\repos\ConsoleApp4\FaceUI\obj\Debug\FaceUI.Properties.Resources.resources
+C:\Users\jenny\source\repos\ConsoleApp4\FaceUI\obj\Debug\FaceUI.csproj.GenerateResource.cache
+C:\Users\jenny\source\repos\ConsoleApp4\FaceUI\obj\Debug\FaceUI.csproj.CoreCompileInputs.cache
+C:\Users\jenny\source\repos\ConsoleApp4\FaceUI\obj\Debug\FaceUI.csproj.CopyComplete
+C:\Users\jenny\source\repos\ConsoleApp4\FaceUI\obj\Debug\FaceUI.exe
+C:\Users\jenny\source\repos\ConsoleApp4\FaceUI\obj\Debug\FaceUI.pdb
